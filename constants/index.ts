@@ -1,0 +1,263 @@
+import { Course, QuestionFilter, SidebarLink, Template } from "@/types";
+
+export const sidebarLinks: SidebarLink[] = [
+  {
+    icon: "hugeicons:home-01",
+    route: "/",
+    label: "الصفحة الرئيسية",
+  },
+  {
+    icon: "hugeicons:user-group-02",
+    route: "/community",
+    label: "المجتمع",
+  },
+  {
+    icon: "hugeicons:collections-bookmark",
+    route: "/collection",
+    label: "التشكيلات",
+  },
+  {
+    icon: "hugeicons:tags",
+    route: "/tags",
+    label: "التصنيفات",
+  },
+  {
+    icon: "hugeicons:job-search",
+    route: "/jobs",
+    label: "البحث عن وظائف",
+  },
+  {
+    icon: "hugeicons:bubble-chat-question",
+    route: "/ask-question",
+    label: "اطرح سؤالا",
+  },
+  {
+    icon: "ph:books-thin",
+    route: "/blog",
+    label: "المدونة",
+  },
+  {
+    icon: "solar:cup-star-line-duotone",
+    route: "/challenges",
+    label: "تحديات برمجية",
+  },
+  {
+    icon: "hugeicons:cursor-02",
+    route: "/help",
+    label: "طلب مساعدة خاص",
+  },
+  {
+    icon: "hugeicons:ai-browser",
+    route: "/templates",
+    label: "متجر ديف توك",
+  },
+  {
+    icon: "hugeicons:elearning-exchange",
+    route: "/courses",
+    label: "دورات تعليمية",
+  },
+  {
+    icon: "hugeicons:ai-user",
+    route: "/profile",
+    label: "الملف الشخصي",
+  },
+  {
+    icon: "hugeicons:megaphone-01",
+    route: "/ads",
+    label: "الاعلان علي منصتنا",
+  },
+];
+
+export const questionFiltersLinks: QuestionFilter[] = [
+  {
+    href: "/",
+    text: "المرشح",
+    icon: "hugeicons:activity-02",
+  },
+  {
+    href: "/",
+    text: "لم يتم الرد عليه",
+    icon: "hugeicons:alert-01",
+  },
+  {
+    href: "/",
+    text: "الاحدث",
+    icon: "hugeicons:star-square",
+  },
+  {
+    href: "/",
+    text: "شائع",
+    icon: "hugeicons:stack-star",
+  },
+];
+
+export const templates: Template[] = [
+  {
+    id: 1,
+    name: "متجر إلكتروني متطور",
+    description:
+      "قالب متجر إلكتروني حديث يحتوي على سلة تسوق وتكامل مع أنظمة الدفع",
+    price: 1200,
+    image: "https://picsum.photos/seed/template1/800/600",
+    features: [
+      "تصميم متجاوب",
+      "سلة تسوق",
+      "تكامل مع أنظمة الدفع",
+      "إدارة المنتجات",
+    ],
+  },
+  {
+    id: 2,
+    name: "بورتفوليو بلس",
+    description: "اعرض أعمالك باحترافية من خلال هذا القالب الأنيق للبورتفوليو",
+    price: 3000,
+    image: "https://picsum.photos/seed/template2/800/600",
+    features: [
+      "معرض المشاريع",
+      "نموذج تواصل",
+      "قسم المدونة",
+      "تكامل مع وسائل التواصل الاجتماعي",
+    ],
+  },
+  {
+    id: 3,
+    name: "بزنس برو",
+    description: "قالب موقع احترافي للأعمال بتصميم عصري ومميز",
+    price: 2100,
+    image: "https://picsum.photos/seed/template3/800/600",
+    features: [
+      "أقسام الخدمات",
+      "ملفات تعريف الفريق",
+      "آراء العملاء",
+      "تكامل مع النشرة البريدية",
+    ],
+  },
+  {
+    id: 4,
+    name: "بزنس برو",
+    description: "قالب موقع احترافي للأعمال بتصميم عصري ومميز",
+    price: 2100,
+    image: "https://picsum.photos/seed/template4/800/600",
+    features: [
+      "أقسام الخدمات",
+      "ملفات تعريف الفريق",
+      "آراء العملاء",
+      "تكامل مع النشرة البريدية",
+    ],
+  },
+  {
+    id: 5,
+    name: "بزنس برو",
+    description: "قالب موقع احترافي للأعمال بتصميم عصري ومميز",
+    price: 2100,
+    image: "https://picsum.photos/seed/template5/800/600",
+    features: [
+      "أقسام الخدمات",
+      "ملفات تعريف الفريق",
+      "آراء العملاء",
+      "تكامل مع النشرة البريدية",
+    ],
+  },
+  {
+    id: 6,
+    name: "بزنس برو",
+    description: "قالب موقع احترافي للأعمال بتصميم عصري ومميز",
+    price: 2100,
+    image: "https://picsum.photos/seed/template6/800/600",
+    features: [
+      "أقسام الخدمات",
+      "ملفات تعريف الفريق",
+      "آراء العملاء",
+      "تكامل مع النشرة البريدية",
+    ],
+  },
+];
+export const courses: Course[] = [
+  {
+    id: 1,
+    title: "المسار الشامل لتطوير الويب",
+    instructor: "سارة جونسون",
+    description: "تعلم تطوير الويب بالكامل من الصفر مع مشاريع عملية",
+    price: 99.99,
+    image: "https://picsum.photos/seed/course1/800/600",
+    duration: "40 ساعة",
+    level: "مبتدئ",
+    category: "تطوير الويب",
+    rating: 4.8,
+    studentsCount: 15420,
+    lessons: 285,
+  },
+  {
+    id: 2,
+    title: "ماستر كلاس في التسويق الرقمي",
+    instructor: "مايك تومسون",
+    description:
+      "إتقان استراتيجيات التسويق عبر السوشيال ميديا وتحسين محركات البحث",
+    price: 79.99,
+    image: "https://picsum.photos/seed/course2/800/600",
+    duration: "25 ساعة",
+    level: "متوسط",
+    category: "التسويق",
+    rating: 4.7,
+    studentsCount: 8750,
+    lessons: 180,
+  },
+  {
+    id: 3,
+    title: "علم البيانات المتقدم باستخدام بايثون",
+    instructor: "الدكتورة إيميلي تشين",
+    description: "تعمق في تعلم الآلة وتحليل البيانات",
+    price: 129.99,
+    image: "https://picsum.photos/seed/course3/800/600",
+    duration: "35 ساعة",
+    level: "متقدم",
+    category: "علوم البيانات",
+    rating: 4.9,
+    studentsCount: 6320,
+    lessons: 220,
+  },
+  {
+    id: 4,
+    title: "تصميم الجرافيك للمبتدئين",
+    instructor: "أحمد يوسف",
+    description:
+      "تعلم أساسيات التصميم الجرافيكي باستخدام الفوتوشوب والإليستريتور",
+    price: 59.99,
+    image: "https://picsum.photos/seed/course4/800/600",
+    duration: "20 ساعة",
+    level: "مبتدئ",
+    category: "التصميم",
+    rating: 4.6,
+    studentsCount: 4900,
+    lessons: 150,
+  },
+  {
+    id: 5,
+    title: "برمجة تطبيقات الهاتف باستخدام فلاتر",
+    instructor: "نورا العتيبي",
+    description:
+      "تعلم تطوير تطبيقات الموبايل لأنظمة iOS و Android باستخدام فلاتر",
+    price: 109.99,
+    image: "https://picsum.photos/seed/course5/800/600",
+    duration: "30 ساعة",
+    level: "متوسط",
+    category: "تطوير التطبيقات",
+    rating: 4.8,
+    studentsCount: 7200,
+    lessons: 200,
+  },
+  {
+    id: 6,
+    title: "اختبار الاختراق والأمن السيبراني",
+    instructor: "محمد العلي",
+    description: "تعلم أساسيات الأمن السيبراني وكيفية اختبار أمان الأنظمة",
+    price: 119.99,
+    image: "https://picsum.photos/seed/course6/800/600",
+    duration: "45 ساعة",
+    level: "متقدم",
+    category: "الأمن السيبراني",
+    rating: 4.9,
+    studentsCount: 5800,
+    lessons: 240,
+  },
+];

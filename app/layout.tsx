@@ -1,14 +1,12 @@
 import "@/styles/globals.css";
 
 import { Metadata, Viewport } from "next";
-import { Link } from "@heroui/link";
 import clsx from "clsx";
-import { ClerkProvider } from "@clerk/nextjs";
 import { IBM_Plex_Sans_Arabic } from "next/font/google";
+import { ClerkProvider } from "@clerk/nextjs";
+import NextTopLoader from "nextjs-toploader";
 
 import { Providers } from "./providers";
-
-import { Navbar } from "@/components/navbar";
 
 const FONT = IBM_Plex_Sans_Arabic({
   subsets: ["arabic"],
@@ -16,9 +14,9 @@ const FONT = IBM_Plex_Sans_Arabic({
 });
 
 export const metadata: Metadata = {
-  title: "MaroFlow | مجتمع المطورين العربي",
+  title: "ديڤ تُوك | DevTok",
   description:
-    "منصة مجتمعية تفاعلية لطرح الأسئلة والإجابة عليها في مجال البرمجة. احصل على المساعدة، وشارك معرفتك، وتعاون مع المطورين من جميع أنحاء العالم. استكشف مواضيع في تطوير الويب، وتطوير تطبيقات الهاتف، والخوارزميات، وهياكل البيانات، والمزيد...",
+    "أكبر منصة مجتمعية تفاعلية لطرح الأسئلة والإجابة عليها في مجال البرمجة. احصل على المساعدة، وشارك معرفتك، وتعاون مع المطورين من جميع أنحاء العالم. استكشف مواضيع في تطوير الويب، وتطوير تطبيقات الهاتف، والخوارزميات، وهياكل البيانات، والمزيد...",
 };
 
 export const viewport: Viewport = {
@@ -39,6 +37,7 @@ export default function RootLayout({
       <body
         className={clsx(
           FONT.className,
+          // eslint-disable-next-line prettier/prettier
           "min-h-screen bg-background antialiased"
         )}
       >
@@ -51,12 +50,10 @@ export default function RootLayout({
           }}
         >
           <Providers themeProps={{ attribute: "class", defaultTheme: "dark" }}>
-            <div className="relative flex flex-col h-screen">
-              <Navbar />
-              <main className="container mx-auto max-w-7xl  px-6 flex-grow">
-                {children}
-              </main>
-              <footer className="w-full flex items-center justify-center py-3">
+            <div className="">
+              <NextTopLoader color="#ff7000" />
+              <main className="flex-grow">{children}</main>
+              {/* <footer className="w-full flex items-center justify-center py-3">
                 <Link
                   isExternal
                   className="flex items-center gap-1 text-current"
@@ -66,7 +63,7 @@ export default function RootLayout({
                   <span className="text-default-600">Powered by</span>
                   <p className="text-primary">HeroUI</p>
                 </Link>
-              </footer>
+              </footer> */}
             </div>
           </Providers>
         </ClerkProvider>

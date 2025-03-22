@@ -1,24 +1,24 @@
 import "@/styles/globals.css";
+
 import { Metadata, Viewport } from "next";
 import { Link } from "@heroui/link";
 import clsx from "clsx";
 import { ClerkProvider } from "@clerk/nextjs";
+import { IBM_Plex_Sans_Arabic } from "next/font/google";
 
 import { Providers } from "./providers";
 
-import { siteConfig } from "@/config/site";
-import { fontSans } from "@/config/fonts";
 import { Navbar } from "@/components/navbar";
 
+const FONT = IBM_Plex_Sans_Arabic({
+  subsets: ["arabic"],
+  weight: ["100", "200", "300", "400", "500", "600", "700"],
+});
+
 export const metadata: Metadata = {
-  title: {
-    default: siteConfig.name,
-    template: `%s - ${siteConfig.name}`,
-  },
-  description: siteConfig.description,
-  icons: {
-    icon: "/favicon.ico",
-  },
+  title: "MaroFlow | مجتمع المطورين العربي",
+  description:
+    "منصة مجتمعية تفاعلية لطرح الأسئلة والإجابة عليها في مجال البرمجة. احصل على المساعدة، وشارك معرفتك، وتعاون مع المطورين من جميع أنحاء العالم. استكشف مواضيع في تطوير الويب، وتطوير تطبيقات الهاتف، والخوارزميات، وهياكل البيانات، والمزيد...",
 };
 
 export const viewport: Viewport = {
@@ -34,15 +34,22 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html suppressHydrationWarning lang="en">
+    <html suppressHydrationWarning dir="rtl" lang="ar">
       <head />
       <body
         className={clsx(
-          "min-h-screen bg-background font-sans antialiased",
-          fontSans.variable
+          FONT.className,
+          "min-h-screen bg-background antialiased"
         )}
       >
-        <ClerkProvider>
+        <ClerkProvider
+          appearance={{
+            elements: {
+              formButtonPrimary: "primary-gradient",
+              footerActionLink: "text-primary hover:text-primary-600",
+            },
+          }}
+        >
           <Providers themeProps={{ attribute: "class", defaultTheme: "dark" }}>
             <div className="relative flex flex-col h-screen">
               <Navbar />
